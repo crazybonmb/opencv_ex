@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img = cv2.imread('test1.jpg')
+img = cv2.imread('../image/test1.jpg')
 img = cv2.bilateralFilter(img, 13, 70, 50)  # 滤波降噪
 box_roi = cv2.selectROI("roi", img)  # 选择roi区域
 # 提取ROI图像
