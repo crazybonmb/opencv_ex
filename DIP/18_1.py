@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
-img = cv2.imread('test18.jpg', 0)
+img = cv2.imread('../image/test18.jpg', 0)
 
 laplacian = cv2.Laplacian(img, -1)
 

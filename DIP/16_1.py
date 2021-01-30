@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
-img = cv2.imread('test15.jpg')  # 注意图片尺寸必须是卷积核的整倍，否则出错
+img = cv2.imread('../image/test15.jpg')  # 注意图片尺寸必须是卷积核的整倍，否则出错
 
 # 2D卷积滤波
 kernel = np.ones((5, 5), np.float32)/25  # 创建一个5x5的平均滤波器核
