@@ -2,11 +2,11 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 
-src = cv2.imread('test21_2.jpg')
+src = cv2.imread('../image/test21_2.jpg')
 img = src.copy()
 imgray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 ret, thresh = cv2.threshold(imgray, 127, 255, 0)
-image, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 cnt = contours[0]
 length = cv2.arcLength(cnt, True)
 
