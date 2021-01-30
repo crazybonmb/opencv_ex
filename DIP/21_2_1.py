@@ -7,7 +7,7 @@ def nothing(x):  # 滑动条的回调函数
     pass
 
 
-src = cv2.imread('test21_2.jpg')  # 图片1
+src = cv2.imread('../image/test21_2.jpg')  # 图片1
 imgray = cv2.cvtColor(src, cv2.COLOR_BGR2GRAY)
 ret, thresh = cv2.threshold(imgray, 127, 255, 0)
 WindowName = 'Approx'  # 窗口名
@@ -20,7 +20,7 @@ while(1):
     img = src.copy()
     n = 10 - cv2.getTrackbarPos('epsilon', WindowName)  # 获取a1滑动条值
 
-    image, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
     cnt = contours[0]
     length = cv2.arcLength(cnt, True)
 
